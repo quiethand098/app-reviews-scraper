@@ -1,0 +1,16 @@
+{
+  "title": "App Reviews Scraper input", "type": "object", "schemaVersion": 1,
+  "properties": {
+    "appStoreApps": { "title": "Apple App Store apps", "type": "array", "editor": "stringList",
+      "description": "App Store URLs or numeric app IDs (e.g. https://apps.apple.com/us/app/whatsapp/id310633997 or 310633997).", "prefill": ["310633997"] },
+    "googlePlayApps": { "title": "Google Play apps", "type": "array", "editor": "stringList",
+      "description": "Google Play URLs or package names (e.g. com.whatsapp).", "prefill": ["com.whatsapp"] },
+    "countries": { "title": "App Store countries", "type": "array", "editor": "stringList",
+      "description": "Two-letter storefront codes for the App Store (us, gb, de, ...). Google Play uses the first one. Default: us.", "default": ["us"] },
+    "language": { "title": "Google Play language", "type": "string", "editor": "textfield", "description": "Language code for Google Play reviews (en, de, es...).", "default": "en" },
+    "sort": { "title": "Sort", "type": "string", "editor": "select", "description": "Newest first, or most helpful first (Google Play only; App Store gives most recent).", "enum": ["newest","helpful"], "default": "newest" },
+    "maxReviewsPerApp": { "title": "Max reviews per app (per country on App Store)", "type": "integer", "description": "App Store allows at most 500 per country. Google Play allows thousands.", "default": 100, "minimum": 1, "maximum": 5000 },
+    "minRating": { "title": "Min rating", "type": "integer", "description": "Skip reviews with fewer stars (1-5).", "default": 1, "minimum": 1, "maximum": 5 },
+    "maxRating": { "title": "Max rating", "type": "integer", "description": "Skip reviews with more stars. Set to 2 to collect only complaints.", "default": 5, "minimum": 1, "maximum": 5 }
+  }
+}

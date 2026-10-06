@@ -1,0 +1,2 @@
+{ "actorSpecification": 1, "name": "app-reviews-scraper-ios-android", "title": "App Reviews Scraper: App Store + Google Play",
+  "version": "0.1", "buildTag": "latest", "input": "./input_schema.json", "dockerfile": "./Dockerfile", "output": "./output_schema.json" }

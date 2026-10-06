@@ -1,0 +1,2 @@
+{ "actorOutputSchemaVersion": 1, "title": "Reviews",
+  "properties": { "results": { "type": "string", "title": "Reviews", "template": "{{links.apiDefaultDatasetItemsUrl}}" } } }
